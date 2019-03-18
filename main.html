@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let x;
+		x = 10;
+		console.log(x - 5);
+		console.log(x + 2);
+
+		var y;
+		y = 10;
+		console.log(y - 5);
+		console.log(y + 2);
+
+		var temp = 5;
+		if(1){
+			var temp = 7;
+			console.log(temp);
+		}
+		console.log(temp);
+		//variable has changed using 'var' inside {the loop}
+
+		let z = 5;
+		if(1){
+			let z = 7;
+			console.log(z);
+		}
+		console.log(z);
+		//the variable has not changed using 'let' inside {the loop}
+
+		const noChange = 5;
+		// noChange = 20; will cause an error
+
+		function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+		  		var result = "";
+		  		result = "My " + myAdjective + " " + myNoun + " " + myVerb + " very " + myAdverb + ".";
+		  		return result;
+		}
+
+		console.log(wordBlanks("big", "dog", "ran", "quickly"));
+		console.log(wordBlanks("cat", "little", "hit", "slowly"));
+
+		function showMessage() {
+  			alert( 'Привет всем присутствующим!' );
+		}
+
+		//setTimeout(showMessage, 1000);
+
+		var testArray = [20,30,40,67];
+		var temp = "Яблоко";
+
+		var arr = ["rfg","Яблоко", "Апельсин", "Груша"];
+
+		arr.forEach(function(item, i , arr) {
+			if (item === temp) {
+				console.log( item);
+			}
+		});
+		// Example
+		var changed = 0;
+
+		function change(num) {
+		  return (num + 5) / 3;
+		}
+
+		changed = change(10);
+ ///////////////////////////////////////
+		var processed = 0;
+
+		function processArg(num) {
+		  return (num + 3) / 5;
+		}
+
+		processed = processArg(7);
+
+		function nextInLine(arr, item) {
+		 
+		  arr.push(item);
+		  var remove = arr.shift();
+		  return remove;  
+		}
+
+///////////////////////////////////////////		
+		var testArr = [1,2,3,4,5];
+
+		// Display Code
+		console.log("Before: " + JSON.stringify(testArr));
+		console.log(nextInLine(testArr, 10)); // Modify this line to test
+		console.log("After: " + JSON.stringify(testArr));	
+
+		/////////////////////////////////////////////////////
+
+		function trueOrFalse(wasThatTrue) {
+
+		  
+		  if (wasThatTrue) {
+		      return "Yes, that was true";
+		  }
+		  
+		    return "No, that was false";
+		}
+
+		// Change this value to test
+		console.log(trueOrFalse(true));
+/////////////////////////////////////////////
+		function chainToSwitch(val) {
+  var answer = "";
+  
+		   switch(val) {
+        case 1:
+		     answer = "There is no #1";
+         return answer;
+		     break;
+        case 7: 
+		      answer = "Ate Nine";
+          return answer;
+		      break;
+		    case 42:
+		      answer = "The Answer";
+          return answer;
+		      break;
+		    case 99:
+		      answer = "Missed me by this much!";
+          return answer;
+		      break;
+		    case "bob":
+		      answer = "Marley";
+          return answer;
+		      break;
+		    default:
+		      answer = "";     
+  
+    return answer;
+}
+}
+// Change this value to test
+chainToSwitch(1);
+	var count = 0;
+/////////////////////////////////////
+function cc(card) {
+  
+  if (card = 2, 3, 4, 5, 6){
+    count += 1;
+  }
+  
+  else if(card = 10, 'J', 'Q', 'K', 'A'){
+    count -= 1;
+  }
+
+  return count + " Bet";
+  
+}
+		console.log(cc(10)); 
+	</script>
+	<script>
+		var myArr = [ 2, 3, 4, 5, 6];
+		var total = 0;
+		
+		for (var i = 0; i < myArr.length; i++){
+  			total += myArr[i];
+		}
+	</script>
+		
+</body>
+</html>

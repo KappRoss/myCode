@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<script>
+		var person = {};
+		person.age = 25;
+		var key = 'age';
+
+		alert(person[key]);
+	</script>
+
+	<script>
+	var user ={};
+	user.name = "Вася";
+	user.surname = "Петров";
+	console.log(user);
+	user.name = "Сергей";
+	console.log(user);
+	delete user.name;
+	console.log(user);
+	</script>
+	
+	<script>
+		//function to multiply the elements of a multi-dimensional array
+	
+	function multiplyAll(arr) {
+  	
+  	var product = 1;
+
+	for(var i=0; i < arr.length; i++){
+	    for(var j=0; j < arr[i].length; j++){
+	      product = product * arr[i][j];
+	    }
+	  }
+
+	  return product;
+	}
+
+// Modify values below to test your code
+	console.log(multiplyAll([[1,2],[3,4],[5,6,7,3]]));
+</script>
+
+</body>
+</html>
